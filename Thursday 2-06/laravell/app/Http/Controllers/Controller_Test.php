@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Candy;
 
 class Controller_Test extends Controller
 {
@@ -14,7 +15,8 @@ class Controller_Test extends Controller
     }
     public function home()
     {
-        return view('layout.home');
+        $data= Candy::all();
+        return view('layout.home',['data'=>$data]);
     }
     public function contact()
     {
@@ -33,7 +35,9 @@ class Controller_Test extends Controller
     ];
     return view('layout.about1', compact('arr'));
 
-    
+}
+public function list(){
+    $data= Candy::all();
 }
 
 }

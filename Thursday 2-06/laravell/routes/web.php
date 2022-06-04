@@ -71,3 +71,4 @@ Route::get('/newTest/id/{id}/user/{user}', [Controller_Test::class,'test2'])-> w
 Route::get('/home',[Controller_Test::class,'home']);
 Route::get('/about',[Controller_Test::class,'Send']);
 Route::get('/contact',[Controller_Test::class,'contact']);
+Route::get('/list',[Controller_Test::class,'list']);
